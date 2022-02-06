@@ -18,7 +18,7 @@ a state in this component to hold the array of movies that was returned. This ar
 This component takes the array of movies from the MovieSearch component and uses the map function to create a list of Movie components. I also 
 
 
-## Movie
+### Movie
 This component takes in a movie and index. I display the movie's title, year and poster. I also set the modal to show and set the movie showed 
 in the modal using the onClick function of the main div of this component.
 

@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Movie Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Usage
+Welcome to Movie Search! 
+Search for your favourite movies and click on the results to view their posters.
+You can also click on the "left" or "right" buttons to scroll through the movies you've searched for.
 
-## Available Scripts
+## Technical Design
+Here is a brief description of how I designed this application (divided by the React Components I created)
 
-In the project directory, you can run:
+### MovieSearch
+This component contains the search bar as well as the MovieList Component. I used this component to hold the states to show the modal,
+as well as to control which movie gets passed to the Modal Component. I also used a useEffect hook to make a call to the movie API
+by taking the input from the user in the search bar and interpolating it with the API provided, using axios to make a GET request. Then I set 
+a state in this component to hold the array of movies that was returned. This array is then passed to the MovieList component.
 
-### `npm start`
+### MovieList
+This component takes the array of movies from the MovieSearch component and uses the map function to create a list of Movie components. I also 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Movie
+This component takes in a movie and index. I display the movie's title, year and poster. I also set the modal to show and set the movie showed 
+in the modal using the onClick function of the main div of this component.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Modal
+This Component takes in a function to set the current modal movie as well as the function to hide the modal after the user clicks the close button.

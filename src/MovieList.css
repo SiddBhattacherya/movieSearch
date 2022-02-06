@@ -1,0 +1,23 @@
+.movielist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.movie{
+    background-color: rgb(209, 248, 253);
+    margin: 1em;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 250ms;
+    box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56); 
+}
+.movie:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+.poster{
+    
+}

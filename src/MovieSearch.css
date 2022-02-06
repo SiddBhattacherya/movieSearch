@@ -1,0 +1,15 @@
+.searcharea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar{
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    background: papayawhip;
+    border: none;
+    border-radius: 3px;
+}

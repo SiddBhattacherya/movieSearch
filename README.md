@@ -1,9 +1,14 @@
 # Movie Search
 
+Click here to visit Movie Search:
+https://siddbhattacherya.github.io/movieSearch/
+
 ## Usage
 Welcome to Movie Search! 
 Search for your favourite movies and click on the results to view their posters.
 You can also click on the "left" or "right" buttons to scroll through the movies you've searched for.
+
+
 
 ## Technical Design
 Here is a brief description of how I designed this application (divided by the React Components I created)
